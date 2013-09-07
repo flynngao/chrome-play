@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  script(type="text/javascript", src="/javascripts/mainCtrl.js")
+  script(type="text/javascript", src="/socket.io/socket.io.js")
+
+  .play-container(ng-controller="mainCtrl",data-uuid="#{uuid}")
+    .pre-play
+        #qrcode(style="background:url(http://www.sparqcode.com/qrgen?qt=url&data=http://112.124.39.120:3000/checkin?uuid=#{uuid}&cap=MOBILE+FUTURE&col=13350F) no-repeat -38px -86px", alt="")
+        .info 请使用手机微信扫描二维码
+    .play-content
+        img#logo(src="http://tp2.sinaimg.cn/1674540501/180/40013708336/1", alt="" )
+  
+  

@@ -1,0 +1,10 @@
+extends layout 
+
+block content
+    script(type="text/javascript", src="/socket.io/socket.io.js")
+    script(type="text/javascript", src="/javascripts/checkinCtrl.js")
+
+    .phone-container(ng-controller="checkinCtrl",data-uuid="#{uuid}")
+        .phone-content
+            img#logo(src="http://tp2.sinaimg.cn/1674540501/180/40013708336/1", alt="" )  
+     
